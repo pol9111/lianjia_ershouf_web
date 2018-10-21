@@ -1,0 +1,98 @@
+构建
+https://github.com/stream-wei/Lianjia/blob/master/Lianjia/spiders/lianjia.py
+https://github.com/feidaoGavin/diandianzu/blob/master/diandianzu/spiders/lianjia.py
+https://github.com/nladuo/lianjia_crawler/tree/master/lianjia_crawler/spiders
+
+反爬
+https://www.jianshu.com/p/aeaa8e0f8f60
+https://cdn2.jianshu.io/p/396776e26f89
+
+
+
+学习
+MongoDBPipeline
+errback
+
+
+思路:
+先爬小区域链接到redis, linkspider
+再爬每个小区域的链接,  ershoufspider(crawl)
+
+
+
+
+
+
+
+
+//div[@class="overview"]/div[@class="content"]//span[2][@class="info"]/text()
+
+
+Cookie: lianjia_uuid=8bab2c14-a665-44ca-b038-8eb50bde5ff4; _smt_uid=5bc740c8.1c1b882f; _ga=GA1.2.916036215.1539784907; _gid=GA1.2.561869791.1539874647; all-lj=3d8def84426f51ac8062bdea518a8717; TY_SESSION_ID=e4370781-048f-4b06-ad73-fca9aadac9b0; introduce=1; Hm_lvt_9152f8221cb6243a53c83b956842be8a=1539876161,1539955288,1540036146,1540124163; Hm_lpvt_9152f8221cb6243a53c83b956842be8a=1540128708
+
+
+
+
+Cookie: lianjia_uuid=8bab2c14-a665-44ca-b038-8eb50bde5ff4; _smt_uid=5bc740c8.1c1b882f; _ga=GA1.2.916036215.1539784907; _gid=GA1.2.561869791.1539874647; all-lj=3d8def84426f51ac8062bdea518a8717; TY_SESSION_ID=e4370781-048f-4b06-ad73-fca9aadac9b0; introduce=1; Hm_lvt_9152f8221cb6243a53c83b956842be8a=1539876161,1539955288,1540036146,1540124163; select_city=110000; lianjia_ssid=b1ff2046-b301-4643-8dc7-9413b410831e; _gat=1; _gat_past=1; _gat_global=1; _gat_new_global=1; _gat_dianpu_agent=1; Hm_lpvt_9152f8221cb6243a53c83b956842be8a=1540131847
+
+
+
+Cookie: lianjia_uuid=8bab2c14-a665-44ca-b038-8eb50bde5ff4; _smt_uid=5bc740c8.1c1b882f; _ga=GA1.2.916036215.1539784907; _gid=GA1.2.561869791.1539874647; all-lj=3d8def84426f51ac8062bdea518a8717; TY_SESSION_ID=e4370781-048f-4b06-ad73-fca9aadac9b0; introduce=1; Hm_lvt_9152f8221cb6243a53c83b956842be8a=1539876161,1539955288,1540036146,1540124163; select_city=110000; lianjia_ssid=b1ff2046-b301-4643-8dc7-9413b410831e; _gat=1; _gat_past=1; _gat_global=1; _gat_new_global=1; _gat_dianpu_agent=1; Hm_lpvt_9152f8221cb6243a53c83b956842be8a=1540131927
+
+
+Cookie: lianjia_uuid=8bab2c14-a665-44ca-b038-8eb50bde5ff4; _smt_uid=5bc740c8.1c1b882f; _ga=GA1.2.916036215.1539784907; _gid=GA1.2.561869791.1539874647; all-lj=3d8def84426f51ac8062bdea518a8717; TY_SESSION_ID=e4370781-048f-4b06-ad73-fca9aadac9b0; introduce=1; Hm_lvt_9152f8221cb6243a53c83b956842be8a=1539876161,1539955288,1540036146,1540124163; select_city=110000; lianjia_ssid=b1ff2046-b301-4643-8dc7-9413b410831e; _gat=1; _gat_past=1; _gat_global=1; _gat_new_global=1; _gat_dianpu_agent=1; Hm_lpvt_9152f8221cb6243a53c83b956842be8a=1540131933
+
+
+
+
+
+
+'Cookie': 'lianjia_uuid=8bab2c14-a665-44ca-b038-8eb50bde5ff4; _smt_uid=5bc740c8.1c1b882f; _ga=GA1.2.916036215.1539784907; _gid=GA1.2.561869791.1539874647; all-lj=3d8def84426f51ac8062bdea518a8717; TY_SESSION_ID=e4370781-048f-4b06-ad73-fca9aadac9b0; select_city=110000; introduce=1; lianjia_ssid=043ce346-92ae-49e2-9e79-59ae6ae5b8c9; Hm_lvt_9152f8221cb6243a53c83b956842be8a=1539876161,1539955288,1540036146,1540124163; Hm_lpvt_9152f8221cb6243a53c83b956842be8a=1540124172'
+
+
+# 'Cookie': 'lianjia_uuid=8bab2c14-a665-44ca-b038-8eb50bde5ff4; _smt_uid=5bc740c8.1c1b882f; _ga=GA1.2.916036215.1539784907; _gid=GA1.2.561869791.1539874647; select_city=110000; all-lj=3d8def84426f51ac8062bdea518a8717; lianjia_ssid=a1006e26-577d-41fe-ad43-aedf51cbc8d4; TY_SESSION_ID=e4370781-048f-4b06-ad73-fca9aadac9b0; Hm_lvt_9152f8221cb6243a53c83b956842be8a=1539874917,1539876161,1539955288,1540036146; Hm_lpvt_9152f8221cb6243a53c83b956842be8a=1540037264; _gat=1; _gat_past=1; _gat_global=1; _gat_new_global=1; _gat_dianpu_agent=1',
+
+
+没变化
+lianjia_uuid
+_smt_uid
+all-lj
+TY_SESSION_ID
+Hm_lvt_9152f8221cb6243a53c83b956842be8a
+Hm_lpvt_9152f8221cb6243a53c83b956842be8a
+
+_gat=1; _gat_past=1; _gat_global=1; _gat_new_global=1;
+_gat_dianpu_agent=1',
+
+
+
+
+lianjia_ssid
+
+
+
+ lianjia_uuid=8bab2c14-a665-44ca-b038-8eb50bde5ff4; _smt_uid=5bc740c8.1c1b882f; _ga=GA1.2.916036215.1539784907; _gid=GA1.2.561869791.1539874647; all-lj=8e5e63e6fe0f3d027511a4242126e9cc; Hm_lvt_9152f8221cb6243a53c83b956842be8a=1539876161,1539955288,1540036146,1540124163; select_city=110000; lianjia_ssid=b1ff2046-b301-4643-8dc7-9413b410831e; _gat=1; _gat_past=1; _gat_global=1; _gat_new_global=1; _gat_dianpu_agent=1; Hm_lpvt_9152f8221cb6243a53c83b956842be8a=1540131946
+
+
+
+lianjia_ssid=b1ff2046-b301-4643-8dc7-9413b410831e; expires=Sun, 21-Oct-18 14:55:48 GMT; Max-Age=1800; domain=.lianjia.com; path=/
+
+d27cdb6e-ae6d-11cf-96b8-444553540000
+
+
+
+Cookie: lianjia_uuid=8bab2c14-a665-44ca-b038-8eb50bde5ff4; _smt_uid=5bc740c8.1c1b882f; _ga=GA1.2.916036215.1539784907; _gid=GA1.2.561869791.1539874647; all-lj=3d8def84426f51ac8062bdea518a8717; TY_SESSION_ID=e4370781-048f-4b06-ad73-fca9aadac9b0; introduce=1; Hm_lvt_9152f8221cb6243a53c83b956842be8a=1539876161,1539955288,1540036146,1540124163; select_city=110000; lianjia_ssid=b1ff2046-b301-4643-8dc7-9413b410831e; Hm_lpvt_9152f8221cb6243a53c83b956842be8a=1540131946
+
+
+
+TY_SESSION_ID=b8088b49-6a05-4445-ada1-cc62586f6789; select_city=110000; lianjia_ssid=030347f4-bb39-459a-9ad7-ae950017b151; lianjia_uuid=e9e9b5ca-1163-43c4-9fda-1984a54e8118; Hm_lvt_9152f8221cb6243a53c83b956842be8a=1540133200; Hm_lpvt_9152f8221cb6243a53c83b956842be8a=1540133200; UM_distinctid=1669717a1ab55e-00934f22060596-784a5037-144000-1669717a1ad3d; _smt_uid=5bcc9150.29343e44; _jzqa=1.740608709032519800.1540133201.1540133201.1540133201.1; _jzqb=1.1.10.1540133201.1; _jzqc=1; _jzqckmp=1; all-lj=dafad6dd721afb903f2a315ab2f72633; CNZZDATA1253477573=741484969-1540130250-%7C1540130250; CNZZDATA1254525948=937376359-1540130044-%7C1540130044; CNZZDATA1255633284=449694914-1540127828-%7C1540127828; CNZZDATA1255604082=436695134-1540128420-%7C1540128420; introduce=1; _qzja=1.189770217.1540133201436.1540133201436.1540133201436.1540133201436.1540133201436.0.0.0.1.1; _qzjb=1.1540133201436.1.0.0.0; _qzjc=1; _qzjto=1.1.0
+
+select_city=110000; all-lj=dafad6dd721afb903f2a315ab2f72633; lianjia_ssid=d3161e55-be80-4ea5-bed6-6056ce54c1e1; lianjia_uuid=b3586e86-4b97-494d-aa71-b3d2470ef390
+
+select_city=110000; all-lj=dafad6dd721afb903f2a315ab2f72633; lianjia_ssid=d3161e55-be80-4ea5-bed6-6056ce54c1e1; lianjia_uuid=b3586e86-4b97-494d-aa71-b3d2470ef390
+
+
+all-lj md5
+
+
+https://www.cnblogs.com/dkblog/archive/2011/10/10/2205200.html
